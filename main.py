@@ -29,7 +29,7 @@ def main():
         raise RuntimeError("response.usage_metadata is None, check for API error")
     
     if args.verbose:
-        print(f"User Prompt: {user_prompt}")
+        print(f"User prompt: {user_prompt}")
         print(f"Prompt tokens: {prompt_tokens}")
         print(f"Response tokens: {response_tokens}")
         print(response.text)
