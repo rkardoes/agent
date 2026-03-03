@@ -5,9 +5,6 @@ def get_files_info(working_directory, directory="."):
     try:
         abs_dir_path = os.path.abspath(working_directory)
         target_dir = os.path.normpath(os.path.join(abs_dir_path, directory))
-        # print(f"abs_dir_path = {abs_dir_path}")
-        # print(f"target_dir = {target_dir}")
-        # print(f"commonpath = {os.path.commonpath([abs_dir_path, target_dir])}")
     # Will be True or False
         valid_target_dir = os.path.commonpath([abs_dir_path, target_dir]) ==  abs_dir_path
         
@@ -17,7 +14,6 @@ def get_files_info(working_directory, directory="."):
             f'Error: "{directory}" is not a directory'
         dir_items = []
         for item in os.listdir(target_dir):
-            # print(item)
             item_name = item
             item_size = os.path.getsize(f"{target_dir}/{item}")
             is_dir = os.path.isdir(f"{target_dir}/{item}")
