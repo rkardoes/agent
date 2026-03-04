@@ -1,0 +1,15 @@
+from functions.run_python_file import run_python_file
+
+print("START TEST ================================================")
+print(run_python_file("calculator", "main.py"))
+print("===========================================================")
+print(run_python_file("calculator", "main.py", ["3 + 5"]))
+print("===========================================================")
+print(run_python_file("calculator", "test.py"))
+print("===========================================================")
+print(run_python_file("calculator", "../main.py"))
+print("===========================================================")
+print(run_python_file("calculator", "nonexistent.py"))
+print("===========================================================")
+print(run_python_file("calculator", "lorem.txt"))
+print("END TEST===================================================")
